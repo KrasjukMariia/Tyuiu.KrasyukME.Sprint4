@@ -23,6 +23,7 @@ namespace Tyuiu.KrasyukME.Sprint4.Task0.V25
             {
                 Console.Write(array[i] + " ");
             }
+
             Console.WriteLine();
 
             Console.WriteLine("***************************************************************************");

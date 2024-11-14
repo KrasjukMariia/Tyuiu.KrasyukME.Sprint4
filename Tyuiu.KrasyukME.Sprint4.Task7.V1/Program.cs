@@ -1,5 +1,5 @@
 ﻿using Tyuiu.KrasyukME.Sprint4.Task7.V1.Lib;
-namespace Tyuiu.KrasyukME.Sprint4.Task7.V1
+namespace Tyuiu.KrasyukME.Sprint4.Task6.V15
 {
     internal class Program
     {
@@ -7,8 +7,8 @@ namespace Tyuiu.KrasyukME.Sprint4.Task7.V1
         {
             Console.Title = "Спринт #4 | Выполнил: Красюк М. Е. | ИБКСб-24-1";
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* Задание #7                                                              *");
-            Console.WriteLine("* Вариант #1                                                              *");
+            Console.WriteLine("* Задание #6                                                              *");
+            Console.WriteLine("* Вариант #15                                                             *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
@@ -32,3 +32,4 @@ namespace Tyuiu.KrasyukME.Sprint4.Task7.V1
         }
     }
 }
+

@@ -5,13 +5,15 @@ namespace Tyuiu.KrasyukME.Sprint4.Task7.V1.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidCalculate()
+        public void TestCalculate()
         {
             DataService ds = new DataService();
-
             string value = "135792468";
+            int expectedCount = 4; // Четные числа: 2, 4, 6, 8
 
-            Assert.AreEqual(20, ds.Calculate(3, 3, value));
+            int result = ds.Calculate(3, 3, value);
+
+            Assert.AreEqual(expectedCount, result);
         }
     }
 }

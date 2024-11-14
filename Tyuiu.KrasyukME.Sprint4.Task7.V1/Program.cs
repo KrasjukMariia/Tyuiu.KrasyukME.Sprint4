@@ -5,30 +5,38 @@ namespace Tyuiu.KrasyukME.Sprint4.Task6.V15
     {
         static void Main(string[] args)
         {
+            DataService ds = new DataService();
+            string value = "135792468";
             Console.Title = "Спринт #4 | Выполнил: Красюк М. Е. | ИБКСб-24-1";
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* Задание #6                                                              *");
-            Console.WriteLine("* Вариант #15                                                             *");
+            Console.WriteLine("* Задание #7                                                              *");
+            Console.WriteLine("* Вариант #1                                                             *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
-            DataService ds = new DataService();
-            Console.WriteLine("Введите количевство строк матрицы: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Строка: " + value);
 
-            Console.WriteLine("Введите количевство столбцов мтарицы: ");
-            int m = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Матрица 3x3:");
+            int[,] matrix = new int[3, 3];
+            for (int i = 0, k = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++, k++)
+                {
+                    matrix[i, j] = int.Parse(value[k].ToString());
+                    Console.Write(matrix[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
 
-            Console.WriteLine("Введите строку цифр: ");
-            string value = Console.ReadLine();
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("РЕЗУЛЬТАТ:                                                                *");
+            Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine(String.Concat(Enumerable.Repeat("*", 75)));
-            Console.WriteLine($"* Результат:{String.Concat(Enumerable.Repeat(" ", 62))}*");
-            Console.WriteLine(String.Concat(Enumerable.Repeat("*", 75)));
+            Console.WriteLine("Количество четных чисел: " + ds.Calculate(3, 3, value));
 
-            Console.WriteLine($"Сумма четных цифр матрицы 3 на 3 составленной из строки равна:\n" +
-                $"{ds.Calculate(n, m, value)}");
             Console.ReadKey();
+
         }
     }
 }
